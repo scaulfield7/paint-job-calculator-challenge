@@ -22,13 +22,7 @@ public class PaintAmountCalculator{
         if(area <= 0 || areaPerBucket <= 0){
             return numberOfBucketsToBuy;
         }
-        if(area < areaPerBucket){
-            numberOfBucketsToBuy = 1;
-        }else{
-            numberOfBucketsToBuy = (int) Math.ceil(area / areaPerBucket);
-            return numberOfBucketsToBuy;
-        }
-        numberOfBucketsToBuy = (int) Math.ceil(areaPerBucket);
+        numberOfBucketsToBuy = (int) Math.ceil(area / areaPerBucket);
         return numberOfBucketsToBuy;
     }
 }
